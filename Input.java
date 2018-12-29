@@ -28,7 +28,7 @@ public class Input {
 
     public void dataInput() {
         String answer;
-        System.out.println("Please insert the information you want and then -1 ");
+        System.out.println("Please insert the information you want for your first input: ");
         Scanner scanner = new Scanner(System.in);
         answer = scanner.next();
         int count1 = 0;
