@@ -5,9 +5,7 @@ public class Menu{
 		input.categoryInput();
 		Change change = new Change();
 		Change.ChanEl(input.outerList);
-
-		 for (int i = 0; i < input.outerList.size() ;i++) {
-		            System.out.println(input.outerList.get(i));
-        }
+		Output output = new Output();
+		Output.printDatabase(input.outerList);
 	}
 }
