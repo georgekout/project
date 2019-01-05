@@ -43,11 +43,7 @@ public class Input {
             }
             System.out.println("You have submitted an object, you can continue for the next one or press -1");
             answer = scanner.next();
-        } while (!(answer.equals("-1")));
-
-        for (int i = 0; i < outerList.size() ;i++) {
-            System.out.println(outerList.get(i));
-        }
+        } while (!(answer.equals("-1")));      
     }
 }
 
