@@ -1,8 +1,10 @@
 import java.util.List;
 import java.util.Scanner;
 
+/* The class which prints the database by choosing all the database , a line or a column.*/
 public class Output {
 
+    /* The main method of this class which asks the user what he/she wants to do */
     public static void printDatabase(List<List<Object>> outerList) {
         System.out.print("\n Press 1, in order to see all the elements"
                 + " that the database contains. \n "
