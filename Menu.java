@@ -37,6 +37,6 @@ public class Menu {
 			}
 			System.out.println("");
 
-		} while(answer != 5);
+		} while(answer != 6);
 	}
 }
