@@ -10,9 +10,9 @@ public class Menu {
 		Output out = new Output();
 		int answer = -1;
 		do{
-			System.out.println("--Data Base Menu--");
+			System.out.println("--Database Menu--");
 			System.out.println("Choose one of the following actions: ");
-			System.out.println("1.Create data base.");
+			System.out.println("1.Create database.");
 			System.out.println("2.Input more data.");
 			System.out.println("3.Change data in pre-existing database.");
 			System.out.println("4.Delete data from pre-existing database.");
