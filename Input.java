@@ -2,18 +2,21 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.List;
 
+/* This class inserts data in the database */
 public class Input {
 
 
     List<List<Object>> outerList = new ArrayList<List<Object>>();
 
-    int count = -1 ;
+    int count = -1;
 
-
+/* This method inserts the name of the categories we want in our database and calls the method to insert the data*/
     public void categoryInput() {
         String answer;
-        System.out.println("Please insert the names of the categories of the information");
-        System.out.println("Whenever you don't want to add another category, please press -1");
+        System.out.println("Please insert the names of "
+                + "the categories of the information");
+        System.out.println("Whenever you don't want to add"
+                + " another category, please press -1");
         Scanner scanner = new Scanner(System.in);
         answer = scanner.next();
         outerList.add(new ArrayList<Object>());
@@ -26,24 +29,31 @@ public class Input {
         dataInput();
     }
 
+    /* This method inserts the information in each category */
     public void dataInput() {
         String answer;
-        System.out.println("Please insert the information you want for your first input: ");
+        System.out.println("Please insert the information "
+                + "you want for your first input: ");
         Scanner scanner = new Scanner(System.in);
         answer = scanner.next();
         int count1 = 0;
         do {
             outerList.add(new ArrayList<Object>());
             count1++;
-            outerList.get(count1).add(0 ,answer);
+            outerList.get(count1).add(0, answer);
 
             for (int i = 1; i < count + 1; i++) {
                 answer = scanner.next();
-                outerList.get(count1).add(i , answer);
+                outerList.get(count1).add(i, answer);
             }
-            System.out.println("You have submitted an object, you can continue for the next one or press -1");
+            System.out.println("You have submitted an object, you can "
+                    + "continue for the next one or press -1");
             answer = scanner.next();
-        } while (!(answer.equals("-1")));      
+        } while (!(answer.equals("-1")));
+
+        for (int i = 0; i < outerList.size(); i++) {
+            System.out.println(outerList.get(i));
+        }
     }
 }
 
