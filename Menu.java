@@ -1,10 +1,14 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /*The claas of the menu which calls the other classes when the user needs them. */
 public class Menu {
-/* The main method */
+    /* The main method */
     public static void main(String [] args) {
         Scanner sc = new Scanner(System.in);
+        ArrayList<Input> list = new ArrayList<Input>();
+        int count=0;
+
         Input in = new Input();
         Change ch = new Change();
         Delete del = new Delete();
@@ -22,9 +26,11 @@ public class Menu {
             answer = sc.nextInt();
 
             if (answer == 1) {
-                in.categoryInput();
+                list.add(new Input());
+                list.get(count).categoryInput();
+                count++;
             } else if (answer == 2) {
-                in.dataInput();
+                in.dataInput(in.outerList.size()-1);
             } else if (answer == 3 ) {
                 ch.changeEl(in.outerList);
             } else if (answer == 4) {
