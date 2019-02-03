@@ -10,7 +10,7 @@ public class Input {
 
     int count = -1;
 
-/* This method inserts the name of the categories we want in our database and calls the method to insert the data*/
+    /* This method inserts the name of the categories we want in our database and calls the method to insert the data*/
     public void categoryInput() {
         String answer;
         System.out.println("Please insert the names of "
@@ -22,21 +22,20 @@ public class Input {
         outerList.add(new ArrayList<Object>());
         do {
             if (!(answer.equals("-1"))) {
-            outerList.get(0).add(++count, answer);
-            answer = scanner.next();
+                outerList.get(0).add(++count, answer);
+                answer = scanner.next();
             }
         } while (!(answer.equals("-1")));
-        dataInput();
+        dataInput(0);
     }
 
     /* This method inserts the information in each category */
-    public void dataInput() {
+    public void dataInput(int count1) {
         String answer;
         System.out.println("Please insert the information "
-                + "you want for your first input: ");
+                + "you want for your input: ");
         Scanner scanner = new Scanner(System.in);
         answer = scanner.next();
-        int count1 = 0;
         do {
             outerList.add(new ArrayList<Object>());
             count1++;
@@ -51,10 +50,5 @@ public class Input {
             answer = scanner.next();
         } while (!(answer.equals("-1")));
 
-        for (int i = 0; i < outerList.size(); i++) {
-            System.out.println(outerList.get(i));
-        }
     }
 }
-
-
