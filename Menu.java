@@ -30,13 +30,37 @@ public class Menu {
                 list.get(count).categoryInput();
                 count++;
             } else if (answer == 2) {
-                in.dataInput(in.outerList.size()-1);
+                for (int i=0; i<list.size(); i++) {
+                    list.get(i).outputconnection();
+                }
+                System.out.println("Please give the number of the database you wish to change: ");
+                Scanner scanner = new Scanner(System.in);
+                answer = scanner.nextInt();
+                list.get(answer-1).dataInput(in.outerList.size()+1);
             } else if (answer == 3 ) {
-                ch.changeEl(in.outerList);
+                for (int i=0; i<list.size(); i++) {
+                    list.get(i).outputconnection();
+                }
+                System.out.println("Please give the number of the database you wish to view: ");
+                Scanner scanner = new Scanner(System.in);
+                answer = scanner.nextInt();
+                list.get(answer-1).change();
             } else if (answer == 4) {
-                del.deleteEl(in.outerList);
+                for (int i=0; i<list.size(); i++) {
+                    list.get(i).outputconnection();
+                }
+                System.out.println("Please give the number of the database you wish to view: ");
+                Scanner scanner = new Scanner(System.in);
+                answer = scanner.nextInt();
+                list.get(answer-1).delete();
             } else if (answer == 5) {
-                out.printDatabase(in.outerList);
+                for (int i=0; i<list.size(); i++) {
+                    list.get(i).outputconnection();
+                }
+                System.out.println("Please give the number of the database you wish to view: ");
+                Scanner scanner = new Scanner(System.in);
+                answer = scanner.nextInt();
+                list.get(answer-1).printdata();
             } else if (answer == 6) {
                 break;
             } else {

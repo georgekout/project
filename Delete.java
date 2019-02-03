@@ -4,7 +4,7 @@ import java.util.Scanner;
 /* This class deletes either a column , a line or a specified element.*/
 public class Delete {
     /* DeleteEl is the main method of the class.*/
-    public static void deleteEl(List<List<Object>> outerList) {
+    public void deleteEl(List<List<Object>> outerList) {
         System.out.print("\n Press 1, in order to delete a column. \n "
                 + "Press 2, in order to delete a line. \n "
                 + "Press 3 in order to delete an element.");
@@ -59,7 +59,7 @@ public class Delete {
 
             } else {
                 System.out.print("\n The column name you inserted "
-                       + "does not exist in the Database.\n");
+                        + "does not exist in the Database.\n");
             }
         } else {
             System.out.println("\n The option you selected does not exist."

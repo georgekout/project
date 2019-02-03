@@ -7,6 +7,9 @@ public class Input {
 
 
     List<List<Object>> outerList = new ArrayList<List<Object>>();
+    Output out = new Output();
+    Change ch = new Change();
+    Delete del = new Delete();
 
     int count = -1;
 
@@ -50,5 +53,19 @@ public class Input {
             answer = scanner.next();
         } while (!(answer.equals("-1")));
 
+    }
+
+    public void outputconnection() {
+        out.printDatabaseNames(outerList);
+    }
+
+    public void printdata() {
+        out.printDatabase(outerList);
+    }
+    public void change() {
+        ch.changeEl(outerList);
+    }
+    public void delete() {
+        del.deleteEl(outerList);
     }
 }
